@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Sign up</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <label for="id_phone_number">Phone number:</label>
+    <input type="text" name="phone_number" id="id_phone_number">
+    <br>
+    <label for="id_email">Email:</label>
+    <input type="email" name="email" id="id_email">
+    <br>
+    <button type="submit">Sign up</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Reserve Parking Spot</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="hours">Number of hours:</label>
+    <input type="text" name="hours" id="hours">
+    <br>
+    <input type="submit" value="Reserve">
+  </form>
+{% endblock %}

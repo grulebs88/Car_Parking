@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Your Reservations</h1>
+  <ul>
+    {% for reservation in reservations %}
+      <li>{{ reservation.parking_spot.latitude }}, {{ reservation.parking_spot.longitude }} ({{ reservation.price }})</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
